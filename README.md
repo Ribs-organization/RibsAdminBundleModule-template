@@ -1,0 +1,1 @@
+# RibsAdminBundleModule-template
