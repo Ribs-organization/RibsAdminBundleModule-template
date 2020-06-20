@@ -1,0 +1,11 @@
+{
+  "items": [
+    {
+      "right": "yourname@admin@index",
+      "url": "yourname_admin_index",
+      "icon": "",
+      "text": "Your name",
+      "part": "a part"
+    }
+  ]
+}

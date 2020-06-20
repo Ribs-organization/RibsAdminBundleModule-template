@@ -1,0 +1,15 @@
+services:
+    PiouPiou\YourNameBundle\:
+        resource: '../../*'
+        exclude: '../../{Entity,Migrations,Tests}'
+
+    PiouPiou\YourNameBundle\Controller\:
+        resource: '../../Controller'
+        calls:
+            - [setContainer, ["@service_container"]]
+        tags: ['controller.service_arguments']
+
+    PiouPiou\YourNameBundle\EventListener\CreateUpdateAwareListener:
+        arguments: [ "@security.untracked_token_storage" ]
+        tags:
+            - { name: doctrine.orm.entity_listener }
